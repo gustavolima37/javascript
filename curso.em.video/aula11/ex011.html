@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Nacionalidade</title>
+    <style>
+        body{
+            font: normal 15pt Arial;
+            background-color: aquamarine;
+
+        }
+        
+        div{
+            border: 5px;
+            background-color: rgb(190, 71, 71);
+            width: 395px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Consultando Nacionalidade</h1>
+        Qual o seu país: <input type="text" id="txt">
+        <input type="button" value="verificar" onclick="verificar()">
+        <div id="res">
+        </div>
+        <script>
+            function verificar() {
+            let país = document.getElementById('txt')
+            let nac =  String(país.value).toUpperCase()
+            let res = document.getElementById('res')
+            if(nac == 'BRASIL'){
+                res.innerHTML += `<p>Você nasceu em <strong>${nac}</strong>, es brasileiro!</p>`
+            }else {
+                res.innerHTML += `<p>Você é de ${nac}, es <em>estrangeiro!</em></p>`
+            }
+            }
+        
+        </script>
+    </main>
+</body>
+</html>
