@@ -19,18 +19,22 @@ function verificar() {
             gênero = 'Homem'
             if(idade >= 0 && idade < 10){
                 //criança
+                gênero = 'Criança'
                 img.setAttribute('src', 'foto_crianca_homem.png')
                 
             }else if(idade < 21){
                 //jovem
+                gênero = 'Jovem'
                 img.setAttribute('src', 'foto_jovem_homem.png')
                 
             }else if(idade < 50){
                 //adulto
+                gênero = 'Adulto'
                 img.setAttribute('src', 'foto_adulto_homem.png')
                 
             }else {
                 //idoso
+                gênero = 'Senhor'
                 img.setAttribute('src', 'foto_idoso_homem.png')
                 
             }
@@ -38,15 +42,19 @@ function verificar() {
             gênero = 'Mulher'
             if(idade >= 0 && idade < 10){
                 //criança
+                gênero = 'Criança'
                 img.setAttribute('src', 'foto_crianca_mulher.png')
             }else if(idade < 21){
                 //jovem
+                gênero = 'Jovem'
                 img.setAttribute('src', 'foto_jovem_mulher.png')
             }else if(idade < 50){
                 //adulto
+                gênero = 'Adulta'
                 img.setAttribute('src', 'foto_adulto_mulher.png')
             }else {
                 //idoso
+                gênero = 'Senhora'
                 img.setAttribute('src', 'foto_idoso_mulher.png')
             }
         }
@@ -54,8 +62,8 @@ function verificar() {
 
         
         res.style.textAlign = 'center' //adicionando estilo diretamente.
-        res.innerHTML = `Detectamos ${gênero} com ${idade} anos.<br>`
-        res.appendChild(img)
+        res.innerHTML = `Detectamos ${gênero} com ${idade} anos.<br>` //escrevendo em baixo da imagem.
+        res.appendChild(img) //a variavel res é filha da img.
 
     }
     
